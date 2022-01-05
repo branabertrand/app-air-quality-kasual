@@ -1,0 +1,20 @@
+
+
+<div class="d-flex flex-column">
+
+    <div class="d-flex justify-content-center align-items-center country-container">
+        <div>
+            <select [(ngModel)]="selectedCountry" class="form-control">
+                <option *ngFor="let country of countries" [value]="country.cca2">{{country.name.official}}</option>
+            </select>
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="onSendToMap()">Envoyer</button>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+
+</div>
